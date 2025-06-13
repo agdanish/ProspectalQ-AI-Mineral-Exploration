@@ -20,5 +20,4 @@ As students balancing **semester exams**, we focused on delivering **2D maps**. 
 
 # Project Map
 Due to size limitations on GitHub, the interactive map has been hosted externally. You can access and interact with the map by downloading the HTML file from the following link:
-
-https://drive.google.com/file/d/1yWlkgLU0g9i72mYgbzPV1RSeOvOevvTd/view?usp=drive_link
+[Download the Mineral Map Output Tutorial PDF](https://github.com/agdanish/ProspectalQ-AI-Mineral-Exploration/blob/main/5_output_maps/Mineral%20Map%20Output%20Tutorial.pdf)
