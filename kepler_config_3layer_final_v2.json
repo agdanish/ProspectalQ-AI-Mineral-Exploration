@@ -1,0 +1,111 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [],
+      "layers": [
+        {
+          "id": "centroids_layer",
+          "type": "point",
+          "config": {
+            "dataId": "Centroids_3L",
+            "label": "Grid Centroids (3L)",
+            "color": [255, 153, 31],
+            "columns": {
+              "lat": "lat",
+              "lng": "lon",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 4,
+              "opacity": 0.8,
+              "colorRange": {
+                "colors": ["#5A189A", "#9D4EDD", "#F72585", "#FFB703", "#F9C74F", "#43AA8B"]
+              },
+              "radiusRange": [1, 10]
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "Prospectivity_Level_6Class_v6",
+              "type": "string"
+            },
+            "colorScale": "ordinal"
+          }
+        },
+        {
+          "id": "polygons_layer",
+          "type": "geojson",
+          "config": {
+            "dataId": "Polygons_Top300K",
+            "label": "Top 300K Polygons",
+            "color": [255, 255, 255],
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.2,
+              "strokeOpacity": 0.6,
+              "thickness": 0.5,
+              "strokeColor": [255, 255, 255],
+              "fillColor": [255, 255, 255]
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "Prospectivity_Level_6Class_v6",
+              "type": "string"
+            },
+            "colorScale": "ordinal"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "Centroids_3L": [
+              "Grid_ID", 
+              "Prospectivity_Level_6Class_v6",
+              "Contains_Critical_Mineral_Target",
+              "Predicted_Prob",
+              "DEM_Elevation_Mean",
+              "SHAP_Insight",
+              "RAG_Insight"
+            ],
+            "Polygons_Top300K": [
+              "Grid_ID", 
+              "Prospectivity_Level_6Class_v6",
+              "Predicted_Prob"
+            ]
+          },
+          "enabled": true
+        }
+      },
+      "layerBlending": "additive",
+      "splitMaps": [],
+      "animationConfig": {
+        "enabled": false
+      }
+    },
+    "mapState": {
+      "bearing": 0,
+      "latitude": 15.0,
+      "longitude": 77.0,
+      "pitch": 0,
+      "zoom": 6
+    },
+    "mapStyle": {
+      "styleType": "dark",
+      "visibleLayerGroups": {
+        "label": true,
+        "road": true,
+        "border": false,
+        "building": false,
+        "water": true,
+        "land": true
+      }
+    }
+  }
+}

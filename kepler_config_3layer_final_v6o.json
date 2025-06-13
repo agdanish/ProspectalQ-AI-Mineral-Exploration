@@ -1,0 +1,138 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "layers": [
+        {
+          "id": "centroids_layer",
+          "type": "point",
+          "config": {
+            "dataId": "Centroids_3L",
+            "label": "Grid Centroids (3L)",
+            "color": [
+              255,
+              255,
+              0
+            ],
+            "columns": {
+              "lat": "lat",
+              "lng": "lon",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 4,
+              "opacity": 0.6,
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#FF5733",
+                  "#FFC300",
+                  "#DAF7A6"
+                ]
+              },
+              "radiusRange": [
+                0,
+                10
+              ]
+            },
+            "textLabel": []
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "Prospectivity_Level_6Class_v6",
+              "type": "string"
+            },
+            "colorScale": "ordinal"
+          }
+        },
+        {
+          "id": "polygon_layer",
+          "type": "geojson",
+          "config": {
+            "dataId": "Polygons_Top300K",
+            "label": "Top 300K Grids (Clickable)",
+            "color": [
+              0,
+              0,
+              0
+            ],
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.2,
+              "thickness": 1.5,
+              "strokeColor": [
+                0,
+                0,
+                0
+              ],
+              "filled": false,
+              "enable3d": false
+            },
+            "textLabel": []
+          },
+          "visualChannels": {}
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "Polygons_Top300K": [
+              "Grid_ID",
+              "Prospectivity_Level_6Class_v6"
+            ],
+            "Centroids_3L": []
+          },
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        },
+        "geocoder": {
+          "enabled": false
+        },
+        "coordinate": {
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": []
+    },
+    "mapState": {
+      "bearing": 0,
+      "dragRotate": false,
+      "latitude": 14.5,
+      "longitude": 77.5,
+      "pitch": 0,
+      "zoom": 7,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "dark",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "label": true,
+        "road": true,
+        "border": false,
+        "building": false,
+        "water": true,
+        "land": true,
+        "3d building": false
+      },
+      "threeDBuildingColor": [
+        9.665468314072013,
+        17.18305478057247,
+        31.1442867897876
+      ]
+    }
+  }
+}
